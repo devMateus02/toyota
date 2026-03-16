@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Avenir, Helvetica, Arial, sans-serif;
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+ margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+.logo-wrapper {
+  position: relative;
+}
+
+
+.scroll {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 50px;
+  border: 2px solid #9e9e9e;
+  border-radius: 15px;
+  opacity: 0;
+}
+
+.scroll-border {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #9e9e9e;
+  border-radius: 50%;
+    animation: scrollAnim 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+@keyframes scrollAnim {
+  0% {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(18px);
+    opacity: 0;
+  }
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 98vh;
+  object-fit: cover;
+  
+}
+
+.linear_gradiente {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.85) 45%,
+    rgba(0,0,0,0.5) 75%,
+    rgba(0,0,0,0.2) 85%,
+    transparent 100%
+  ),
+  linear-gradient(
+    145deg,
+    #00000009 0%,
+    #00000009 30%,
+    #a3a0a02f 44%,
+    #00000009 58%,
+    #00000009 100%
+  );
+
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar .nav-links {
+  font-family: "Roboto", 'Poppins', sans-serif;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar .nav-links a {
+  color: #d4d3d3;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffffff;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn-nav {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#868175,#6b655a,#6d675b,#7a766d,#a89f8b,#8f887c);
+  background-size: 250%;
+  background-position: left;
+  color: #302f2e;
+  position: relative;
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn-nav::before {
+  position: absolute;
+  content: "Saiba mais";
+  color: #f3f0eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.651);
+  background-size: 100%;
+}
+
+.Btn-nav:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn-nav:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn-nav:active {
+  transform: scale(0.95);
+}
+
+.hero_text {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  color: #f3f3f3;
+  padding-left:1%;
+ 
+}
+
+.intro-title{
+  font-family:"Montserrat","Roboto", 'Poppins', sans-serif;
+  font-size: 6.5rem;
+  font-weight: 500;
+  max-width:750px ;
+  opacity: 0;
+  color: #d4d2d2;
+}
+
+.intro-description{
+  font-family: "IBM Plex Sans", 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 20px;
+  max-width: 500px;
+  color: #d4d2d2;
+  opacity:0;
+}
+
+
+
+main {
+  position: relative;
+
+}
+
+/* ✅ loader overlay por cima do site */
+
+.logo-wrapper {
+  position: relative;
+  transform-origin: 50% 50%;
+}
+
+
+/* main começa escondido */
+.main-wrapper{
+  position: relative;
+  opacity: 0;
+
+}
+
+.intro-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111111;
+}
+
+.intro-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+intro-bg{
+  position: absolute;
+  inset: 0;
+  background: #0c0c0c;
+}
+
+.intro-overlay > *:not(.intro-bg){
+  position: relative;
+  z-index: 1;
+}
+
+.main-wrapper{
+  position: relative;
+  z-index: 1;
+  --blur: 20px;
+  filter: blur(var(--blur));
+  transition: none;
+}
+
+.intro-scroll-space{
+  height: 450vh;     /* controla o “tempo” da intro */
+  pointer-events: none;
+  background: transparent; /* garante que não “aparece” */
+}
+
+.main-wrapper{
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+
+}
+
+
+
+.sec-performance{
+  width:100%;
+  position:relative;
+  background-image:url('../public/bg-performance.jpg');
+  background-size:cover;
+  background-position:center;
+  height: 400vh; /* controla o tempo da animação */
+}
+
+.performance-wrapper{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20em;
+}
+
+
+.cardperf{
+  background-color: #d1c9c931;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 30px;
+  color: #272727;
+  width: 330px;
+  height: 350px;;
+  font-family: "Roboto", 'Poppins', sans-serif;
+  box-shadow: #0000002c -15px 10px 30px;
+}
+
+.perf_content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-left: 3px solid #0084FF;
+  padding-left: 20px;
+  height: 300px;
+}
+
+.perf_number{
+font-size: 22px;
+color: #69665f;
+}
+
+.perf_title{
+  font-size: 22px;
+  font-weight: 450;
+  margin-top: 5px;
+  letter-spacing: 15%;
+  position: relative;
+}
+
+.perf_title::after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  width: 58%;
+  height: 1.5px;
+  background-color: #545557;
+}
+
+.perf_subtitle{
+  padding-top: 26px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: 5%;
+  max-width: 200px;
+  margin-top:10px;
+
+}
+
+.perf_description{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  max-width:150px ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ color: #676161;
+}
+
+.perf-btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #555453;
+  margin-top: 10px;
+}
+
+.car-container{
+  position:relative;
+}
+
+.corollacar{
+  width:540px;
+}
+.cards-container{
+  position:relative;
+  width:330px;
+  height:350px;
+}
+
+.performance-card{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+
+
+
+.espaço{
+  height: 100vh;
+  background-color: red;
+}
+
+.next-section{
+  height:100vh;
+  background:#111;
+}
+
+.performance-pin{
+  position:relative;
+  min-height: 100vh;
+}
+
+.car-container{
+position:relative;
+}
+
+.corollacar{
+width:540px;
+}
+
+.car-text{
+position:absolute;
+top:-70px;
+left:20%;
+max-width:520px;
+}
+
+.car-category{
+font-size:35px;
+letter-spacing:4px;
+color:#7b848c;
+margin-bottom:10px;
+font-weight: 300;
+}
+
+.car-main-title{
+font-size:28px;
+font-weight:500;
+line-height:1.1;
+color:#2b333a;
+}
+
+.car-side-features{
+position:absolute;
+top:200px;
+right:-220px;
+display:flex;
+flex-direction:column;
+gap:5px;
+
+}
+
+.car-feature{
+display:flex;
+gap:10px;
+font-size:12px;
+color:#5c646b;
+max-width:220px;
+}
+
+.bullet{
+width:10px;
+height:10px;
+background:#0088ff;
+border-radius:50%;
+margin-top:10px;
+}
+
